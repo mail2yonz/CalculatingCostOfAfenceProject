@@ -45,17 +45,22 @@ public class Main {
         int perimeter=2*(Height+width);
 
 
-       // do{
+        if(NumberOfFences<=3) {
             int GateCost=150*NumberOfFences;
 
 
             System.out.println ("Display the number of fences:"+NumberOfFences );
+            coastbeforeTax= perimeter*FenceCost+ buildingPermit + GateCost;
             NumberOfFences++;
-       // }while(NumberOfFences<=3);
-        coastbeforeTax= perimeter*FenceCost+ buildingPermit + GateCost;
+            System.out.println("The total cost is : "+coastbeforeTax);
 
-        TotalCost=coastbeforeTax + (taxRate*coastbeforeTax);
-        System.out.println("The total cost is : "+TotalCost);
+            TotalCost=coastbeforeTax + (taxRate*coastbeforeTax);
+            System.out.println("The total cost is : "+TotalCost);
+
+        }else{
+            System.out.println ("Please Enter number of fences between 1 to 3" );
+        }
+
 
     }
 }
