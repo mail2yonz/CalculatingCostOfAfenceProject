@@ -44,18 +44,19 @@ public class Main {
         double taxRate=0.06;
         int perimeter=2*(Height+width);
 
+        System.out.println ("The number of fences you Entered is :"+NumberOfFences );
 
         if(NumberOfFences<=3) {
             int GateCost=150*NumberOfFences;
 
 
-            System.out.println ("Display the number of fences:"+NumberOfFences );
             coastbeforeTax= perimeter*FenceCost+ buildingPermit + GateCost;
-            NumberOfFences++;
+
             System.out.println("The total cost is : "+coastbeforeTax);
 
             TotalCost=coastbeforeTax + (taxRate*coastbeforeTax);
             System.out.println("The total cost is : "+TotalCost);
+           // NumberOfFences++;
 
         }else{
             System.out.println ("Please Enter number of fences between 1 to 3" );
